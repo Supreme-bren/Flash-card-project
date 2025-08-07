@@ -1,12 +1,12 @@
 from tkinter import *
 import pandas
-from Scripts.MyScripts.hangman import word_list
 
 BACKGROUND_COLOR = "#B1DDC6"
 
 #----------------------------------------------DATA----------------------------------------#
 data_frame = pandas.read_csv("./data/french_words.csv")
-word_list  = {key:value for (key,value) in word_list.iterrows()}
+word_list  = {key:value for (key,value) in data_frame.iterrows()}
+print(data_frame)
 print(word_list)
 
 
